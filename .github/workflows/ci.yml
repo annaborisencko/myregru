@@ -6,7 +6,7 @@ on:
 
 jobs:
   testing:
-    runs-on: ububntu-28.84
+    runs-on: ububntu-latest
     env:
       SECRET_KEY: ${{ secrets.SECRET }}
       DEBUG: ${{ secrets.DEBUG }}
