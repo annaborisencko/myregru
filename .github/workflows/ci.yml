@@ -1,9 +1,7 @@
 name: Testing and deployment
-
 on:
   push:
       branches: [master]
-
 jobs:
   testing:
       runs-on: ububntu-28.84
@@ -17,7 +15,6 @@ jobs:
         DB_USER: ${{ secrets.DB_USER }}
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         ALLOWED_HOSTS: ${{ secrets.ALLOWED_HOSTS }}
-
     services:
       postgresql_main:
         image: postgres:12
