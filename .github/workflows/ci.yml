@@ -59,7 +59,7 @@ jobs:
           DB_PASSWORD: ${{ env.DB_PASSWORD }}
           ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
       - name: Деплой
-        uses: appleboy/ssh-actions@master
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST}}
           username: ${{ secrets.SSH_USER}}
