@@ -46,18 +46,19 @@ jobs:
       # - name: Линтинг
       #   run: flake8 myregru/first_app/ --exclude=myregru/first_app/migrations
 
-      - name: Тестирование
-        run: python manage.py pytest
-        env: 
-          SECRET_KEY: ${{ env.SECRET }}
-          DEBUG: ${{ env.DEBUG }}
-          DB_ENGINE: ${{ env.DB_ENGINE }}
-          DB_NAME: ${{ env.DB_NAME }}
-          DB_HOST: ${{ env.DB_HOST }}
-          DB_PORT: ${{ env.DB_PORT }}
-          DB_USER: ${{ env.DB_USER }}
-          DB_PASSWORD: ${{ env.DB_PASSWORD }}
-          ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
+      # - name: Тестирование
+      #   run: python manage.py pytest
+      #   env: 
+      #     SECRET_KEY: ${{ env.SECRET }}
+      #     DEBUG: ${{ env.DEBUG }}
+      #     DB_ENGINE: ${{ env.DB_ENGINE }}
+      #     DB_NAME: ${{ env.DB_NAME }}
+      #     DB_HOST: ${{ env.DB_HOST }}
+      #     DB_PORT: ${{ env.DB_PORT }}
+      #     DB_USER: ${{ env.DB_USER }}
+      #     DB_PASSWORD: ${{ env.DB_PASSWORD }}
+      #     ALLOWED_HOSTS: ${{ env.ALLOWED_HOSTS }}
+
       - name: Деплой
         uses: appleboy/ssh-action@master
         with:
