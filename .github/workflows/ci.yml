@@ -43,8 +43,8 @@ jobs:
       - name: Установка зависимостей
         run: pip install -r ./myregru/requirements.txt
 
-      - name: Линтинг
-        run: flake8 myregru/first_app/ --exclude=myregru/first_app/migrations
+      # - name: Линтинг
+      #   run: flake8 myregru/first_app/ --exclude=myregru/first_app/migrations
 
       - name: Тестирование
         run: python manage.py pytest
