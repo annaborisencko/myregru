@@ -44,7 +44,7 @@ jobs:
         run: pip install -r ./myregru/requirements.txt
 
       - name: Линтинг
-        run: flake8 first_app/ --exclude-first_app/migrations
+        run: flake8 first_app/ --exclude=first_app/migrations
 
       - name: Тестирование
         run: python manage.py pytest
